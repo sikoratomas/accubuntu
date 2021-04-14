@@ -13,7 +13,7 @@ if [ "$(id -u)" != "0" ]; then
    exit 1
 fi
 
-echo "The build starts"
+echo "The build starts. Follow the white rabbit."
 
 #Update and Upgrade
 apt-get update && sudo apt-get upgrade -y
@@ -108,7 +108,7 @@ sudo sysctl vm.swappiness=10
 #this needs a reboot to take effect
 
 #Firmware update
-sudo fwupdtool refresh -y
+sudo fwupdtool refresh
 sudo fwupdmgr get-updates -y
 sudo fwupdmgr update -y
 
