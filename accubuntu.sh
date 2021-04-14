@@ -73,22 +73,13 @@ rm *deb
 
 #Create user account
 #has to be first.last format
-#sudo adduser username --force-badname
 
-echo -n "Enter the username: "
+echo -n "Enter the username in format first.last: "
 read username
-
-echo -n "Enter the password: "
-read -s password
-
-adduser "$username"
-echo $username:$password | chpasswd
-#echo "$password" | passwd "$username" --stdin
-
+adduser "$username" --force-badname
 
 #Add user to sudo group
 sudo usermod -aG sudo "$username"
-#sudo usermod -aG sudo username
 
 #Enforce password complexity:
 #Install libpam-pwquality package
