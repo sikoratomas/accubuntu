@@ -97,11 +97,11 @@ sudo usermod -aG sudo "$username"
 #PASS_WARN_AGE 14
 
 
-# turn off welcome sound
-#sudo -u gdm gconftool-2 --set /desktop/gnome/sound/event_sounds --type bool false
+#add laptop to Landscape
+echo -n "Enter the laptop name "
+read laptopname
+sudo landscape-config --computer-title "$laptopname" --account-name accolade
 
-# enabling cpufreq-applet CPU frequency scaling #
-#sudo chmod u+s /usr/bin/cpufreq-selector
 
 #Change value of swapiness
 sudo sysctl vm.swappiness=10
