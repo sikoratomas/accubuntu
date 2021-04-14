@@ -98,10 +98,10 @@ sudo usermod -aG sudo "$username"
 
 
 # turn off welcome sound
-sudo -u gdm gconftool-2 --set /desktop/gnome/sound/event_sounds --type bool false
+#sudo -u gdm gconftool-2 --set /desktop/gnome/sound/event_sounds --type bool false
 
 # enabling cpufreq-applet CPU frequency scaling #
-sudo chmod u+s /usr/bin/cpufreq-selector
+#sudo chmod u+s /usr/bin/cpufreq-selector
 
 #Change value of swapiness
 sudo sysctl vm.swappiness=10
