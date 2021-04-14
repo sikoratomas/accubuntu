@@ -65,7 +65,7 @@ wget https://zoom.us/client/latest/zoom_amd64.deb
 
 #Install DEB packages
 #sudo dpkg -i *.deb
-sudo apt install ./*.deb
+sudo apt install ./*.deb -y
 
 #Remove DEB packages
 rm *deb
@@ -73,10 +73,22 @@ rm *deb
 
 #Create user account
 #has to be first.last format
-sudo adduser username --force-badname
+#sudo adduser username --force-badname
+
+echo -n "Enter the username: "
+read username
+
+echo -n "Enter the password: "
+read -s password
+
+adduser "$username"
+echo $username:$password | chpasswd
+#echo "$password" | passwd "$username" --stdin
+
 
 #Add user to sudo group
-sudo usermod -aG sudo username
+sudo usermod -aG sudo "$username"
+#sudo usermod -aG sudo username
 
 #Enforce password complexity:
 #Install libpam-pwquality package
