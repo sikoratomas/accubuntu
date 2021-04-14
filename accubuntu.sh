@@ -18,10 +18,6 @@ echo "The build starts"
 #Update and Upgrade
 apt-get update && sudo apt-get upgrade -y
 
-#Firmware update
-sudo fwupdtool refresh
-sudo fwupdmgr get-updates -y
-sudo fwupdmgr update -y
 
 #Add PPAs
 #sudo add-apt repository ppa:
@@ -107,6 +103,11 @@ sudo chmod u+s /usr/bin/cpufreq-selector
 #Change value of swapiness
 sysctl vm.swappiness=10
 #this needs a reboot to take effect
+
+#Firmware update
+#sudo fwupdtool refresh
+#sudo fwupdmgr get-updates -y
+#sudo fwupdmgr update -y
 
 # finish
 echo " ALL DONE; rebooting ... "
