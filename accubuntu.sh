@@ -104,13 +104,13 @@ sudo -u gdm gconftool-2 --set /desktop/gnome/sound/event_sounds --type bool fals
 sudo chmod u+s /usr/bin/cpufreq-selector
 
 #Change value of swapiness
-sysctl vm.swappiness=10
+sudo sysctl vm.swappiness=10
 #this needs a reboot to take effect
 
 #Firmware update
-#sudo fwupdtool refresh
-#sudo fwupdmgr get-updates -y
-#sudo fwupdmgr update -y
+sudo fwupdtool refresh -y
+sudo fwupdmgr get-updates -y
+sudo fwupdmgr update -y
 
 # finish
 echo " ALL DONE; rebooting ... "
