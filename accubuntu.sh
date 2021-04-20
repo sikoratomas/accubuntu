@@ -98,9 +98,9 @@ sudo usermod -aG sudo "$username"
 
 
 #add laptop to Landscape
-echo -n "Enter the laptop name "
-read laptopname
-sudo landscape-config --computer-title "$laptopname" --account-name accolade
+#echo -n "Enter the laptop name "
+#read laptopname
+sudo landscape-config --computer-title "$username" --account-name accolade
 
 
 #Change value of swapiness
