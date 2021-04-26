@@ -2,7 +2,7 @@
 # Tomas Sikora, 2021
 # Accolade Ubuntu semi-automated build
 # Tested on 20.04.2
-# Version 1
+# Version 1.1
 
 set -e
 
@@ -106,6 +106,9 @@ sudo landscape-config --computer-title "$username" --account-name accolade
 #Change value of swapiness
 sudo sysctl vm.swappiness=10
 #this needs a reboot to take effect
+
+#Delete cloned accubuntu folder
+sudo rm -R accubuntu
 
 #Firmware update
 sudo fwupdtool refresh
