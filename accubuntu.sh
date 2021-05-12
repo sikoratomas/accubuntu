@@ -33,7 +33,7 @@ sudo apt install network-manager-openconnect-gnome landscape-client libpam-pwqua
 git clone https://github.com/sikoratomas/falcon.git /tmp/falcon
 
 #Install Falcon
-sudo dpkg -i  /tmp/falcon/falcon-sensor.deb
+sudo dpkg -i  /tmp/falcon/falcon-sensor6.16.deb
 
 #Add Accolade customerID to Falcon
 sudo /opt/CrowdStrike/falconctl -s --cid=4CF5242A1D3A4FF3A72FFB4E3BBB873D-FF
