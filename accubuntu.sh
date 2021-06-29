@@ -60,7 +60,7 @@ sudo rm -rf /tmp/qualys
 
 
 #Download apps that need DEB package
-wget https://downloads.slack-edge.com/linux_releases/slack-desktop-4.8.0-amd64.deb
+wget https://downloads.slack-edge.com/linux_releases/slack-desktop-4.17.0-amd64.deb
 wget https://zoom.us/client/latest/zoom_amd64.deb
 
 #Install DEB packages
