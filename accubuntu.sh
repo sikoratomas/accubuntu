@@ -75,6 +75,9 @@ sudo snap install slack --classic
 sudo apt-get update
 sudo apt-get upgrade slack-desktop
 
+#Install Insync
+sudo apt-get install insync
+
 #Create user account
 #has to be first.last format
 
