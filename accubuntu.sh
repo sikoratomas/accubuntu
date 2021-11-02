@@ -1,8 +1,8 @@
 #!/bin/bash
-# Tomas Sikora, 2021
+# Tomas Sikora, March 2021
 # Accolade Ubuntu semi-automated build
-# Tested on 20.04.2
-# Version 1.1
+# Tested on 20.04.3
+# Version 1.2
 
 set -e
 
@@ -13,7 +13,7 @@ if [ "$(id -u)" != "0" ]; then
    exit 1
 fi
 
-echo "The build starts. Follow the white rabbit."
+echo "The build starts."
 
 #Update and Upgrade
 apt-get update && sudo apt-get upgrade -y
@@ -60,7 +60,7 @@ sudo rm -rf /tmp/qualys
 
 
 #Download apps that need DEB package
-wget https://downloads.slack-edge.com/linux_releases/slack-desktop-4.17.0-amd64.deb
+#wget https://downloads.slack-edge.com/linux_releases/slack-desktop-4.17.0-amd64.deb
 wget https://zoom.us/client/latest/zoom_amd64.deb
 
 #Install DEB packages
@@ -70,6 +70,10 @@ sudo apt install ./*.deb -y
 #Remove DEB packages
 rm *deb
 
+#Install and update Slack
+sudo snap install slack --classic
+sudo apt-get update
+sudo apt-get upgrade slack-desktop
 
 #Create user account
 #has to be first.last format
