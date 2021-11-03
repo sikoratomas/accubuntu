@@ -74,7 +74,7 @@ rm *deb
 sudo snap install slack --classic
 
 #Install Insync
-sudo apt-get install insync
+
 
 #Create user account
 #has to be first.last format
