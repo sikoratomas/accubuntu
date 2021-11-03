@@ -72,8 +72,6 @@ rm *deb
 
 #Install and update Slack
 sudo snap install slack --classic
-sudo apt-get update
-sudo apt-get upgrade slack-desktop
 
 #Install Insync
 sudo apt-get install insync
